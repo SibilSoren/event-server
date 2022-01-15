@@ -4,9 +4,13 @@ const createEvent = require("./routes/createEvents");
 const updateEvent = require("./routes/updateEvent");
 const getEvent = require("./routes/getEvents");
 const deleteEvent = require("./routes/deleteEvent");
-const { urlencoded } = require("express");
+const connectDB = require("./db/connectDB");
+
 dontev.config();
 const app = express();
+
+//connecting database
+connectDB();
 
 //middlewares
 app.use(express.json());
