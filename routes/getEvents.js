@@ -1,8 +1,6 @@
 const express = require("express");
 const route = express.Router();
-
-route.get("/", (req, res) => {
-  res.send("Endpoint working Read");
-});
+const getEventController = require("../controller/getEventController");
+route.get("/", getEventController);
 
 module.exports = route;

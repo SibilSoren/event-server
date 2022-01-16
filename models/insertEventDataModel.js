@@ -1,5 +1,5 @@
 const Event = require("../db/eventSchema");
-const mongoose = require("mongoose");
+
 const insertEventData = async (data, callback) => {
   console.log(data);
   const events = new Event({
